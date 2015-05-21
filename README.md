@@ -24,8 +24,8 @@ That is, if you want to start the project you would execute `npm start`. This wi
 **Both servers?**
 
 This scaffold runs 2 servers:
-A regular web server for all common things. (Port 8080)
-An assets server by using Webpack. (Port 8081)
+A **regular web server** for all common things. (Port 8080)
+An **assets server** by using Webpack. (Port 8081)
 
 If you don’t know Webpack, it takes modules with dependencies and generates static assets representing those modules.
 
