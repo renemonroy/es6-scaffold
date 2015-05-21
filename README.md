@@ -5,6 +5,8 @@ A scaffolding project for single page web applications where ES6 is used extensi
 
 ## Overview
 
+![IO.js React Webpack Node.js](https://raw.githubusercontent.com/wiki/renemonroy/es6-scaffold/images/logos.png)
+
 By the time, [io.js](https://iojs.org) has ES6 features available by default without the use of --harmony flag as Node. I'm using io.js until both get merged together.
 
 [Koa](koajs.com) its a web framework that leverages generators to eliminate the callback craziness while [Co](https://github.com/tj/co) eases the generators flow control relying on Promises.
