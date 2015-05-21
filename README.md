@@ -11,6 +11,8 @@ By the time, [io.js](https://iojs.org) has ES6 features available by default wit
 
 [React](https://facebook.github.io/react/) supports ES6 classes since its version 0.13.0. We can use almost all ES6 features using [Webpack](http://webpack.github.io/) compiling with [Babel](https://babeljs.io/) loader ([babel-loader](https://github.com/babel/babel-loader)).
 
+Routing is handled with [Page](https://visionmedia.github.io/page.js/) instead of the common react-router since I'm planning to create a front router that satisfies my syntax needs in the comming weeks.
+
 ## Architecture
 
 First of all npm is used as a build tool and it control all processes with [PM2](https://github.com/Unitech/pm2) (A future update will show logs and different monitoring visualizers in different [tmux](http://tmux.sourceforge.net/) panes).
