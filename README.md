@@ -27,7 +27,7 @@ This scaffold runs 2 servers:
 * A **regular web server** for all common things. (Port 8080)
 * An **assets server** by using Webpack. (Port 8081)
 
-If you don’t know Webpack, it takes modules with dependencies and generates static assets representing those modules.
+> Webpack takes modules with dependencies and generates static assets representing those modules.
 
 The regular server proxies requests for static assets `’/assets'` to the assets server, which is a node server that uses the Webpack api.
 
