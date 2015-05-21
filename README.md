@@ -29,7 +29,7 @@ This scaffold runs 2 servers:
 
 > Webpack takes modules with dependencies and generates static assets representing those modules.
 
-The regular server proxies requests for static assets `’/assets'` to the assets server, which is a node server that uses the Webpack api.
+The regular server proxies requests for static assets `/assets` to the assets server, which is a node server that uses the Webpack api.
 
 I’m not using React on backend widely because its server side performance is a bit slow. Even though, Isomorphic still happens for the initial layout by following a perceived performance approach rendering into views of [EJS](https://github.com/tj/ejs) template engine.
 
