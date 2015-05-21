@@ -1,0 +1,16 @@
+{
+  "name" : "io-koa-webpack-react",
+  "version" : "0.0.1",
+  "description" : "io.js, koa, webpack, react and more",
+  "dependencies" : {
+    "pm2" : "0.x.x",
+    "co" : "4.x.x",
+    "koa" : "0.x.x",
+    "koa-logger" : "1.x.x",
+    "koa-router" : "4.x.x",
+    "co-views" : "0.x.x",
+    "ejs" : "2.x.x"
+  },
+  "author" : "renemonroy",
+  "license" : "MIT"
+}

@@ -15,7 +15,7 @@ Routing is handled with [Page](https://visionmedia.github.io/page.js/) instead o
 
 ## Architecture
 
-First of all npm is used as a build tool and it control all processes with [PM2](https://github.com/Unitech/pm2) (A future update will show logs and different monitoring visualizers in different [tmux](http://tmux.sourceforge.net/) panes).
+First of all, [npm](https://www.npmjs.com/) is used as a task runner. It control all processes with [PM2](https://github.com/Unitech/pm2) (A future update will show logs and different monitoring visualizers in different [tmux](http://tmux.sourceforge.net/) panes).
 
 That is, if you want to start the project you would execute `npm start`. This will use `NODE_ENV=development` in both servers by default.
 
