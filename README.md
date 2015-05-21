@@ -13,11 +13,11 @@ By the time, [io.js](https://iojs.org) has ES6 features available by default wit
 
 [React](https://facebook.github.io/react/) supports ES6 classes since its version 0.13.0. We can use almost all ES6 features using [Webpack](http://webpack.github.io/) compiling with [Babel](https://babeljs.io/) loader ([babel-loader](https://github.com/babel/babel-loader)).
 
-Routing is handled with [Page](https://visionmedia.github.io/page.js/) instead of the common react-router since I'm planning to create a front router that satisfies my syntax needs in the comming weeks.
+Routing is handled with [Page](https://visionmedia.github.io/page.js/) instead of the common react-router. I'm planning to create a front router that satisfies my syntax needs in the comming weeks.
 
 ## Architecture
 
-First of all, [npm](https://www.npmjs.com/) is used as a task runner. It control all processes with [PM2](https://github.com/Unitech/pm2) (A future update will show logs and different monitoring visualizers in different [tmux](http://tmux.sourceforge.net/) panes).
+First of all, [npm](https://www.npmjs.com/) is used as a task runner with `npm run` scripts. It control processes with [PM2](https://github.com/Unitech/pm2) (A future update will show logs and different monitoring visualizers in different [tmux](http://tmux.sourceforge.net/) panes).
 
 That is, if you want to start the project you would execute `npm start`. This will use `NODE_ENV=development` in both servers by default.
 
