@@ -31,7 +31,7 @@ This scaffold runs 2 servers:
 
 The regular server proxies requests for static assets `/assets` to the assets server, which is a node server that uses the Webpack api.
 
-Server renders views into by using [EJS](https://github.com/tj/ejs) template engines. The app asumes that all views will be loaded on demand so it previews the main layout and updates it when ready. The lazy loading of files is done by using [bundle-loader](https://github.com/webpack/bundle-loader).
+It renders views using [EJS](https://github.com/tj/ejs) template engines. The app asumes that all views will be loaded on demand so it previews the main layout and updates it when ready. The lazy loading of files is done by using [bundle-loader](https://github.com/webpack/bundle-loader).
 
 > Isomorphic is not introduced until I do performance tests with React on backend (mainly because is synchronous). Also the fact to use 'bundle-loader' for lazy pages adds complexity for the backend rendering.
 
