@@ -1,0 +1,30 @@
+{
+  "name": "rene-mn-assets",
+  "version": "0.0.1",
+  "description": "Server that shows static assets handled by main server.",
+  "devDependencies": {
+    "jsx-loader": "^0.x.x",
+    "babel-loader": "^4.x.x",
+    "bundle-loader": "^0.x.x",
+    "webpack": "^1.x.x",
+    "webpack-dev-server": "^1.x.x"
+  },
+  "dependencies": {
+    "express": "4.x.x",
+    "page": "1.x.x",
+    "react": "0.12.x",
+    "react-style": "0.x.x",
+    "react-draggable": "0.x.x",
+    "flux": "^2.x.x",
+    "object-assign": "^2.x.x",
+    "keymirror": "^0.x.x"
+  },
+  "author": "renemonroy",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "reactjs",
+    "assets",
+    "webpack"
+  ]
+}
