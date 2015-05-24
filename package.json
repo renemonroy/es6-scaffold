@@ -6,6 +6,7 @@
     "start-dev": "pm2 start main-server/server.js --name 'Main Server' & NODE_ENV=development pm2 start assets-server/server.js --name 'Assets Server'",
     "stop-dev": "pm2 stop 'Main Server' | pm2 stop 'Assets Server'",
     "restart-dev": "npm run stop-dev && npm run start-dev",
+    "set-up": "cd main-server/ && sudo npm install && cd .. && cd assets-server/ && sudo npm install",
     "start": "npm run start-dev",
     "stop": "npm run stop-dev",
     "restart": "npm run restart-dev"
