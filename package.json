@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A scaffolding project for single page web applications where ES6 is widely used. It relies on io.js, Koa, Co, React, Webpack and Babel usage.",
   "scripts": {
-    "start-dev": "pm2 start main-server/server.js --name 'Main Server' & pm2 start assets-server/server.js --name 'Assets Server'",
+    "start-dev": "pm2 start main-server/server.js --name 'Main Server' & NODE_ENV=development pm2 start assets-server/server.js --name 'Assets Server'",
     "stop-dev": "pm2 stop 'Main Server' | pm2 stop 'Assets Server'",
     "restart-dev": "npm run stop-dev && npm run start-dev",
     "start": "npm run start-dev",
