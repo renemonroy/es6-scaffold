@@ -11,8 +11,5 @@
     "restart": "npm run restart-dev"
   },
   "author": "renemonroy",
-  "license": "MIT",
-  "devDependencies": {
-    "react": "^0.12.2"
-  }
+  "license": "MIT"
 }
