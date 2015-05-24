@@ -21,7 +21,7 @@ var fileNames = function(pathDir, paths) {
 var getEntry = function(type) {
   var entry = {
     'vendor' : ['react', 'react-style', 'react-draggable', 'flux', 'page', 'object-assign', 'keymirror'],
-    'app' : ['./app/index.jsx']
+    'app' : ['./index.jsx']
   };
   console.log(entry);
   return entry;
