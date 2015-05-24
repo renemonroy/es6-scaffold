@@ -1,5 +1,4 @@
 var config = require('./config');
-process.env.NODE_ENV = config.env;
 
 var webpack = require('webpack'),
   WebpackDevServer = require('webpack-dev-server'),
