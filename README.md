@@ -36,3 +36,17 @@ It renders views using [EJS](https://github.com/tj/ejs) template engines. The ap
 > Isomorphic is not introduced until I do performance tests with React on backend (mainly because is synchronous). Also the fact to use 'bundle-loader' for lazy pages adds complexity for the backend rendering.
 
 No CSS pre-processor is used extensively yet to open the idea of using inline styles ([react-style](https://github.com/js-next/react-style)) like some Facebook, Flipboard and other web apps do.
+
+## Installation
+
+You need io.js, node.js and PM2 installed first. Go to each project pages to know more about how to do it.
+
+Now, just fork the project, clone the repo in a desired folder and in project's root run:
+
+``` shell
+  npm run set-up
+```
+
+This will install node modules on both servers: **assets-server** and **main-server**. Just change the package files in each server if you want the latest versions of each module.
+
+You want to start the project by executing `npm start`, which will run the servers locally.
