@@ -48,14 +48,14 @@ let Row = React.createClass({
   displayName : 'Row',
 
   /**
-   * Sets initial variables, which is only 'resizable' for now. 
+   * Sets initial variables, which is only 'resizable' for now.
    */
   getDefaultProps() {
     return { rowName : null, resizable : false };
   },
 
   /**
-   * Builds columns with cached widths and possible draggables if configured 
+   * Builds columns with cached widths and possible draggables if configured
    * as true via props.
    */
   renderColumns(comps) {
@@ -94,7 +94,7 @@ let Row = React.createClass({
       lCol = rfs[lColName],
       rColW = (rCol.state.colWidth || parseInt(rCol.getDOMNode().offsetWidth)) - e.movementX,
       lColW = (lCol.state.colWidth || parseInt(lCol.getDOMNode().offsetWidth)) + e.movementX;
-    
+
     rCol.setState({ colWidth : rColW });
     lCol.setState({ colWidth : lColW });
 

@@ -1,29 +1,27 @@
 import React from 'react/addons';
 import Styles from 'react-style';
 
-let Header = React.createClass({
-  
-  displayName : 'Header',
-
-  render() {
-    let ps = this.props;
-    return (
-      <header {...ps}>
-        <div className="wrapper" styles={[styl.wrapper]}>
-          <h2>{ps.heading}</h2>
-        </div>
-      </header>
-    );
-  }
-
-});
-
-let styl = Styles.create({
-  wrapper : {
+const styles = Styles.create({
+  contStyle : {
     padding : '8px 0 0 0',
     maxWidth : '1218px',
     margin : '0 auto'
   }
 });
 
-export default Header;
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  },
+  render() {
+    const { heading } = this.props,
+      { contStyle } = this.styles;
+    return (
+      <header {...this.props}>
+        <div className="container" styles={[contStyle]}>
+          <h2>{heading}</h2>
+        </div>
+      </header>
+    );
+  }
+};

@@ -8,17 +8,32 @@ import Navigation from './components/shared/navigation';
 import UIStore from './stores/ui';
 import UIActions from './actions/ui';
 
-let getAppState = () => ({
+const getAppState = () => ({
   view : UIStore.getView(),
   viewData : UIStore.getViewData(),
   ctx : UIStore.getCtx(),
   pages : UIStore.getPages()
 });
 
-let App = React.createClass({
-  displayName : 'App',
-  getInitialState() {
-    return getAppState();
+const styles = Styles.create({
+  appStyle : {
+    backgroundColor : '#f9f9fb',
+    height : '100%',
+    width : '100%'
+  },
+  rowStyle : {
+    height : '100%'
+  },
+  viewsStyle : {
+    height : '100%'
+  }
+});
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this._onUIStoreChange = this._onUIStoreChange.bind(this);
+    this.state = getAppState();
   },
   componentWillMount() {
     this._setupRouting();
@@ -39,33 +54,17 @@ let App = React.createClass({
     this.setState(getAppState());
   },
   render() {
-    let st = this.state,
-      view = st.view ? <st.view viewData={st.viewData} /> : null;
+    const { view, viewData, ctx, pages } = this.state,
+      { rowStyle, viewsStyle, appStyle } = this.styles;
     return(
-      <div {...this.props} className="app" styles={[styl.app]}>
-        <Row styles={[styl.row]}>
-          <Navigation ctx={st.ctx} pages={st.pages} colWidth={60} />
-          <main styles={[styl.views]}>
-            { view }
+      <div {...this.props} className="app" styles={[appStyle]}>
+        <Row styles={[rowStyle]}>
+          <Navigation ctx={ctx} pages={pages} colWidth={60} />
+          <main styles={[viewsStyle]}>
+            {st.view ? <st.view viewData={viewData} /> : null}
           </main>
         </Row>
       </div>
     );
   }
-});
-
-let styl = Styles.create({
-  app : {
-    backgroundColor : '#f9f9fb',
-    height : '100%',
-    width : '100%'
-  },
-  row : {
-    height : '100%'
-  },
-  views : {
-    height : '100%'
-  }
-});
-
-export default App;
+};

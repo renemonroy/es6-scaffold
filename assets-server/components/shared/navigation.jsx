@@ -2,61 +2,70 @@ import React from 'react/addons';
 import Router from 'page';
 import Styles from 'react-style';
 
-let Navigation = React.createClass({
+const styles = Styles.create({
+  navStyle : {
+    flex : 1,
+    backgroundColor : '#333c4e',
+    height : '100%'
+  },
+  btnStyle : {
+    border : '0 none',
+    backgroundColor : 'transparent',
+    color : '#fff',
+    fontSize : '12px'
+  },
+  btnActiveStyle : {
+    color : 'red'
+  }
+});
 
-  displayName : 'Navigation',
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.navigate = this.navigate.bind(this);
+  },
 
+  /**
+   * Routes to the url specified in the button dataset. Which is
+   * stored from the prop `page.url`.
+   */
   navigate(e) {
     e.preventDefault();
     Router(e.target.dataset.url);
   },
 
+  /**
+   * Returns an array of buttons that will be rendered inside an
+   * unordered list of buttons.
+   */
   renderButtons() {
-    let nav = this,
-      ps = nav.props;
-    return ps.pages.map( function(btn) {
-      let btnActive = (ps.ctx) && (ps.ctx.params.view == btn.name) ?
-        styl.buttonActive : null;
+    const nav = this, ps = this.props, { pages } = ps;
+    return pages.map( function(page) {
+      const { url } = page, { btnStyle } = styles,
+        activeBtn = ((ps.ctx) && (ps.ctx.params.view == page.name)) ? styles.btnAtiveStyle : null;
       return (
-        <li key={'nav-' + btn.name}>
-          <button
-            data-url={btn.url} 
-            onClick={nav.navigate}
-            styles={[styl.button, btnActive]}>
-            {btn.title}
+        <li key={'nav-' + page.name}>
+          <button data-url={url} onClick={nav.navigate} styles={[btnStyle, activeBtn]}>
+            {page.title}
           </button>
         </li>
       );
     });
   },
 
+  /**
+   * Component created to wrap the main navigation of the app.
+   * Routing relies on the url set up on a page.
+   */
   render() {
+    const { navStyle } = styles;
     return (
-      <nav {...this.props} style={styl.nav}>
+      <nav {...this.props} style={navStyle}>
         <ul>
           {this.renderButtons()}
         </ul>
       </nav>
     );
   }
-
-});
-
-let styl = Styles.create({
-  nav : {
-    flex : 1,
-    backgroundColor : '#333c4e',
-    height : '100%'
-  },
-  button : {
-    border : '0 none',
-    backgroundColor : 'transparent',
-    color : '#fff',
-    fontSize : '12px'
-  },
-  buttonActive : {
-    color : 'red'
-  }
-});
-
-export default Navigation;
+  
+};
