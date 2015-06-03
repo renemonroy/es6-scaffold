@@ -61,7 +61,7 @@ export default class App extends React.Component {
         <Row styles={[rowStyle]}>
           <Navigation ctx={ctx} pages={pages} colWidth={60} />
           <main styles={[viewsStyle]}>
-            {st.view ? <st.view viewData={viewData} /> : null}
+            { st.view ? <st.view viewData={viewData} /> : null }
           </main>
         </Row>
       </div>

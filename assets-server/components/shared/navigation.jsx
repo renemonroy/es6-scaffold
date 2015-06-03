@@ -1,20 +1,20 @@
 import React from 'react/addons';
 import Router from 'page';
-import Styles from 'react-style';
+import InlineStyles from 'react-style';
 
-const styles = Styles.create({
-  navStyle : {
+const inlineStyles = InlineStyles.create({
+  ISNavigation : {
     flex : 1,
     backgroundColor : '#333c4e',
     height : '100%'
   },
-  btnStyle : {
+  ISButton : {
     border : '0 none',
     backgroundColor : 'transparent',
     color : '#fff',
     fontSize : '12px'
   },
-  btnActiveStyle : {
+  ISButtonActive : {
     color : 'red'
   }
 });
@@ -41,11 +41,15 @@ export default class App extends React.Component {
   renderButtons() {
     const nav = this, ps = this.props, { pages } = ps;
     return pages.map( function(page) {
-      const { url } = page, { btnStyle } = styles,
-        activeBtn = ((ps.ctx) && (ps.ctx.params.view == page.name)) ? styles.btnAtiveStyle : null;
+      const { url } = page, { ISButton } = inlineStyles,
+        activeBtn = ((ps.ctx) && (ps.ctx.params.view == page.name)) ?
+          inlineStyles.ISButtonActive : null;
       return (
         <li key={'nav-' + page.name}>
-          <button data-url={url} onClick={nav.navigate} styles={[btnStyle, activeBtn]}>
+          <button
+            data-url={url}
+            onClick={nav.navigate}
+            styles={[ISButton, ISButtonActive]}>
             {page.title}
           </button>
         </li>
@@ -58,14 +62,14 @@ export default class App extends React.Component {
    * Routing relies on the url set up on a page.
    */
   render() {
-    const { navStyle } = styles;
+    const { ISNavigation } = inlineStyles;
     return (
-      <nav {...this.props} style={navStyle}>
+      <nav {...this.props} style={ISNavigation}>
         <ul>
           {this.renderButtons()}
         </ul>
       </nav>
     );
   }
-  
+
 };

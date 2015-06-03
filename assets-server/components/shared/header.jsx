@@ -1,8 +1,8 @@
 import React from 'react/addons';
 import InlineStyles from 'react-style';
 
-const is = InlineStyles.create({
-  isContainer : {
+const inlineStyles = InlineStyles.create({
+  ISContainer : {
     padding : '8px 0 0 0',
     maxWidth : '1218px',
     margin : '0 auto'
@@ -15,10 +15,10 @@ export default class Header extends React.Component {
   },
   render() {
     const { heading } = this.props,
-      { isContainer } = this.styles;
+      { ISContainer } = this.styles;
     return (
       <header {...this.props}>
-        <div className="container" styles={[isContainer]}>
+        <div className="container" styles={[ISContainer]}>
           <h2>{heading}</h2>
         </div>
       </header>
