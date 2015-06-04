@@ -49,7 +49,7 @@ export default class App extends React.Component {
           <button
             data-url={url}
             onClick={nav.navigate}
-            styles={[ISButton, ISButtonActive]}>
+            styles={[ISButton, activeBtn]}>
             {page.title}
           </button>
         </li>
