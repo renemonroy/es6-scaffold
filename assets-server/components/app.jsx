@@ -2,7 +2,7 @@ require('./app.scss');
 
 import React from 'react/addons';
 import Router from 'page';
-import Styles from 'react-style';
+import InlineStyles from 'react-style';
 import Row from './ui/row';
 import Navigation from './shared/navigation';
 import UIStore from '../stores/ui';
@@ -15,16 +15,16 @@ const getAppState = () => ({
   pages : UIStore.getPages()
 });
 
-const styles = Styles.create({
-  appStyle : {
+const inlineStyles = InlineStyles.create({
+  ISApp : {
     backgroundColor : '#f9f9fb',
     height : '100%',
     width : '100%'
   },
-  rowStyle : {
+  ISRow : {
     height : '100%'
   },
-  viewsStyle : {
+  ISViews : {
     height : '100%'
   }
 });
@@ -57,11 +57,11 @@ export default class App extends React.Component {
     const { view, viewData, ctx, pages } = this.state,
       { rowStyle, viewsStyle, appStyle } = this.styles;
     return(
-      <div {...this.props} className="app" styles={[appStyle]}>
-        <Row styles={[rowStyle]}>
+      <div {...this.props} className="app" styles={[ISApp]}>
+        <Row styles={[ISRow]}>
           <Navigation ctx={ctx} pages={pages} colWidth={60} />
-          <main styles={[viewsStyle]}>
-            { st.view ? <st.view viewData={viewData} /> : null }
+          <main styles={[ISViews]}>
+            { view }
           </main>
         </Row>
       </div>
