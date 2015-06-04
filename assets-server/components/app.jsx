@@ -34,25 +34,25 @@ export default class App extends React.Component {
     super(props);
     this._onUIStoreChange = this._onUIStoreChange.bind(this);
     this.state = getAppState();
-  },
+  }
   componentWillMount() {
     this._setupRouting();
-  },
+  }
   componentDidMount() {
     UIStore.addChangeListener(this._onUIStoreChange);
-  },
+  }
   componentWillUnmount() {
     UIStore.removeChangeListener(this._onUIStoreChange);
-  },
+  }
   _setupRouting() {
     Router('/', '/profile');
     Router('/:view', UIActions.loadView);
     Router.start();
     return this;
-  },
+  }
   _onUIStoreChange() {
     this.setState(getAppState());
-  },
+  }
   render() {
     const { view, viewData, ctx, pages } = this.state,
       { rowStyle, viewsStyle, appStyle } = this.styles;
@@ -67,4 +67,4 @@ export default class App extends React.Component {
       </div>
     );
   }
-};
+}
