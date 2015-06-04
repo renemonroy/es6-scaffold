@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react/addons';
 import App from './app.jsx';
 
