@@ -6,6 +6,9 @@
     "jsx-loader": "^0.x.x",
     "babel-loader": "^4.x.x",
     "bundle-loader": "^0.x.x",
+    "css-loader": "0.x.x",
+    "sass-loader": "^0.x.x",
+    "style-loader": "0.x.x",
     "webpack": "^1.x.x",
     "webpack-dev-server": "^1.x.x"
   },
