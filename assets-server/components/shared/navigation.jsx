@@ -23,7 +23,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.navigate = this.navigate.bind(this);
-  },
+  }
 
   /**
    * Routes to the url specified in the button dataset. Which is
@@ -32,7 +32,7 @@ export default class App extends React.Component {
   navigate(e) {
     e.preventDefault();
     Router(e.target.dataset.url);
-  },
+  }
 
   /**
    * Returns an array of buttons that will be rendered inside an
@@ -55,7 +55,7 @@ export default class App extends React.Component {
         </li>
       );
     });
-  },
+  }
 
   /**
    * Component created to wrap the main navigation of the app.
@@ -72,4 +72,4 @@ export default class App extends React.Component {
     );
   }
 
-};
+}
