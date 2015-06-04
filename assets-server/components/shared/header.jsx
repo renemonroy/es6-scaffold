@@ -12,7 +12,7 @@ const inlineStyles = InlineStyles.create({
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
-  },
+  }
   render() {
     const { heading } = this.props,
       { ISContainer } = this.styles;
@@ -24,4 +24,4 @@ export default class Header extends React.Component {
       </header>
     );
   }
-};
+}
