@@ -15,7 +15,7 @@
   "dependencies": {
     "express": "4.x.x",
     "page": "1.x.x",
-    "react": "0.12.x",
+    "react": "0.13.x",
     "react-style": "0.x.x",
     "react-draggable": "0.x.x",
     "flux": "^2.x.x",
