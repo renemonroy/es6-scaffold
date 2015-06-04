@@ -54,8 +54,10 @@ export default class App extends React.Component {
     this.setState(getAppState());
   }
   render() {
-    const { view, viewData, ctx, pages } = this.state,
-      { rowStyle, viewsStyle, appStyle } = this.styles;
+    let st = this.state,
+      { viewData, ctx, pages } = st,
+      { ISRow, ISViews, ISApp } = inlineStyles;
+    let view = st.view ? <st.view viewData={viewData} /> : null;
     return(
       <div {...this.props} className="app" styles={[ISApp]}>
         <Row styles={[ISRow]}>
