@@ -1,3 +1,4 @@
+var config = null;
 
 switch (process.env.NODE_ENV) {
   case 'development' :
