@@ -23,9 +23,11 @@ const inlineStyles = InlineStyles.create({
 });
 
 export default class View extends React.Component {
+
   constructor(props) {
     super(props);
-  },
+  }
+
   render() {
     const { heading, children } = this.props,
       { ISHeader, ISAreaWithHeader, ISAreaWithoutHeader, ISView } = inlineStyles;
@@ -39,4 +41,5 @@ export default class View extends React.Component {
       </div>
     );
   }
-};
+
+}
