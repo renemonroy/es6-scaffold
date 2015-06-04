@@ -8,10 +8,7 @@ var uiData = {
   viewData : null,
   ctx : null,
   pages : [
-    { name : 'bio', title : 'Bio', url : '/bio' },
-    { name : 'projects', title : 'Projects', url : '/projects' },
-    { name : 'ideas', title : 'Ideas', url : '/ideas' },
-    { name : 'about', title : 'About', url : '/about'}
+    { name : 'home', title : 'Home', url : '/home' }
   ]
 };
 
