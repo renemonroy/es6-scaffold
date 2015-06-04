@@ -4,7 +4,7 @@
   "description": "Server that shows static assets handled by main server.",
   "devDependencies": {
     "jsx-loader": "^0.x.x",
-    "babel-loader": "^4.x.x",
+    "babel-loader": "^5.x.x",
     "bundle-loader": "^0.x.x",
     "css-loader": "0.x.x",
     "sass-loader": "^0.x.x",
