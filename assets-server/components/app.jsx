@@ -3,10 +3,10 @@ require('./app.scss');
 import React from 'react/addons';
 import Router from 'page';
 import Styles from 'react-style';
-import Row from './components/ui/row';
-import Navigation from './components/shared/navigation';
-import UIStore from './stores/ui';
-import UIActions from './actions/ui';
+import Row from './ui/row';
+import Navigation from './shared/navigation';
+import UIStore from '../stores/ui';
+import UIActions from '../actions/ui';
 
 const getAppState = () => ({
   view : UIStore.getView(),
