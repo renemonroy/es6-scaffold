@@ -45,7 +45,7 @@ export default class App extends React.Component {
     UIStore.removeChangeListener(this._onUIStoreChange);
   }
   _setupRouting() {
-    Router('/', '/profile');
+    Router('/', '/home');
     Router('/:view', UIActions.loadView);
     Router.start();
     return this;
