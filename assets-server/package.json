@@ -18,7 +18,7 @@
     "react": "0.13.x",
     "react-style": "0.x.x",
     "react-draggable": "0.x.x",
-    "flux": "^2.x.x",
+    "alt": "0.16.x",
     "object-assign": "^2.x.x",
     "keymirror": "^0.x.x"
   },
